@@ -23,12 +23,14 @@
     display: none;
 }
 #nav-section .hmb-label {
+    position: relative;
     float: left;
     margin: 40px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-self: center;
+    z-index: 101;
 }
 .hmb-label .bar {
     background-color: #ffff;
@@ -80,15 +82,19 @@
     overflow: hidden;
     z-index: 100;
     margin: 0;
-    top: 0px;
+    top: 100px;
     left: 0px;
     padding: 0px;
 }
-#side-nav-container .hmb-label {
-    margin-left: 0px;
-    margin-right: 120px;
+#side-nav {
+    padding-left: 0px;
+    margin-top: 1px;
+    margin-bottom: 0;
 }
 #side-nav li {
+    border-color: #dbc6ad;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
     list-style: none;
 }
 #side-nav li a {
@@ -118,25 +124,59 @@
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+.contact-container {
+    text-align: center;
+    background-color: #dbc6ad;
+}
+.contact-container:hover {
+    background-color: #ad9578;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.contact-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffff;
+    display: inline-block;
+    position: relative;
+}
+.contact-text::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffff;
+    transform-origin: bottom right;
+    transition: 0.25s ease-out;
+}
+.contact-text:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 #hmb-menu:checked ~ #side-nav-container {
-    max-height: 110%;
+    max-height: 482px;
     height: 100%;
     max-width: 360px;
     width: 100%;
 }
 #hmb-menu:checked ~ .hmb-label .bar1 {
     transform: translate(0, 6.2px) rotate(45deg);
-    transition: 0.2s ease-out;
+    transition: 0.25s ease-out;
     width: 20px; 
 }
 #hmb-menu:checked ~ .hmb-label .bar2 {
     opacity: 0;
     transform: translate(-10px);
-    transition: 0.2s;
+    transition: 0.25s;
 }
 #hmb-menu:checked ~ .hmb-label .bar3 {
     transform: translate(0, -6.2px) rotate(-45deg);
-    transition: 0.2s ease-out;
+    transition: 0.25s ease-out;
     width: 20px;
 } 
 #mainHeaderSection {
@@ -171,4 +211,13 @@
     font-size: 25px;
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
+}
+#learn-section {
+    height: 200px;
+    background-color: #ffff;
+}
+#learn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
