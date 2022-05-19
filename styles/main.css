@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #162d54;
+  background-color: #ffff;
   height: 100px;
   padding: 0px 70px 0px 70px;
   align-items: center;
@@ -33,7 +33,7 @@
   z-index: 101;
 }
 .hmb-label .bar {
-  background-color: #ffff;
+  background-color: #162d54;
   margin: 2px;
   height: 2px;
   width: 19px;
@@ -49,7 +49,7 @@
   font-size: 14px;
   font-weight: 700;
   margin: 10px;
-  color: #ffff;
+  color: #162d54;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
@@ -63,7 +63,7 @@
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #ffff;
+  background-color: #162d54;
   transform-origin: bottom right;
   transition: 0.25s ease-out;
 }
@@ -76,9 +76,9 @@
   flex-direction: column;
   position: absolute;
   max-height: 0;
-  max-width: 0;
+  width: 100%;
   transition: max-height 0.3s ease;
-  background-color: #e1d3c3;
+  background-color: #162d54;
   overflow: hidden;
   z-index: 100;
   margin: 0;
@@ -90,11 +90,12 @@
   padding-left: 0px;
   margin-top: 1px;
   margin-bottom: 0;
+  text-align: center;
 }
 #side-nav li {
-  border-color: #dbc6ad;
+  /* border-color: #dbc6ad;
   border-style: solid;
-  border-width: 1px 1px 0px 1px;
+  border-width: 0.5px 0.5px 0px 0.5px; */
   list-style: none;
 }
 #side-nav li:hover {
@@ -163,10 +164,10 @@
   transform-origin: bottom left;
 }
 #hmb-menu:checked ~ #side-nav-container {
-  max-height: 482px;
+  max-height: 470px;
   height: 100%;
-  max-width: 360px;
-  width: 100%;
+  /* max-width: 360px;
+  width: 100%; */
 }
 #hmb-menu:checked ~ .hmb-label .bar1 {
   transform: translate(0, 6.2px) rotate(45deg);
@@ -275,11 +276,31 @@
 #info-container{ 
     display: flex;
     flex-direction: column;
+    padding: 90px;
 }
 #info-h2, #info-p{ 
-    margin: 0px;
+    margin: 50px;
     position: relative;
     text-align: center;
     color: #ffff;
     font-family: 'Montserrat', sans-serif;
+}
+#info-h2 {
+    font-size: 41px;
+    font-weight: 500;
+}
+#info-p {
+    font-size: 18px;
+    font-weight: 300;
+}
+#benefits-section{ 
+    background: #ffff;
+}
+#benefits-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.global-img {
+    width: 300px;
+    height: 300px;
 }
