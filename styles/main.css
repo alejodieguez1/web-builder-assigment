@@ -1,3 +1,6 @@
+.body-container {
+    background: black;
+}
 #header-section {
     display: flex;
     flex-direction: column;
@@ -32,16 +35,52 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    display: inline-block;
+    position: relative;
 }
-.nav-ul li a:hover {
-    text-decoration: underline;
-    transform-origin: left;
-    transition: 0.2s;
+.nav-ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffff;
+    transform-origin: bottom right;
+    transition: 0.25s ease-out;
+}
+.nav-ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+#mainHeaderSection {
+    position: relative;
+    height: 450px;
+}
+#mainHeaderSection::before {
+    content: "";
+    background-image: url(/assets/avi-werde-HI4nq3HjImU-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
 }
 #main-h1, #main-text {
+    margin-top: 110px;
+    position: relative;
+    color: #ffff;
     text-align: center;
 }
 #main-h1 {
     font-size: 71px;
     font-family: 'Montserrat', sans-serif;
+}
+#main-text {
+    margin-top: 50px;
 }
