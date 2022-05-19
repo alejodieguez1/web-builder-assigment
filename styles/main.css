@@ -295,12 +295,69 @@
 }
 #benefits-section{ 
     background: #ffff;
+    padding: 100px;
 }
 #benefits-container{
     display: grid;
     grid-template-columns: 50% 50%;
 }
+#benefit-container {
+    margin: 20px;
+    text-align: center;
+}
+.global-h3, .global-p {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 75px;
+}
+.global-h3 {
+    font-size: 35px;
+    font-weight: 600;
+    width: 50%;
+    margin-left: 150px;
+}
+.global-p {
+    width: 70%;
+    line-height: 24px;
+}
 .global-img {
-    width: 300px;
-    height: 300px;
+    margin: 50px;
+    width: 700px;
+    height: 700px;
+}
+#us-section {
+    position: relative;
+    height: 500px;
+}
+#us-section::before {
+    content: "";
+    background-image: url(/assets/max-harlynking-kAbOlQRY78s-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+}
+#us-container{ 
+    display: flex;
+    flex-direction: column;
+    padding: 90px;
+}
+#us-h3, #us-p{ 
+    margin: 50px;
+    position: relative;
+    text-align: center;
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+}
+#us-h3 {
+    font-size: 51px;
+    font-weight: 500;
+}
+#us-p {
+    font-size: 25px;
+    font-weight: 300;
 }
